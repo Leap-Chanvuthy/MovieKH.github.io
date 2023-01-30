@@ -1,0 +1,220 @@
+
+/* Content */
+.content {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: #303030;
+}
+/* Genre list */
+.genre-group-list {
+    width: 100%;
+}
+.mat-chip-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.mat-chip-list .genre {
+    height: 30px;
+    background-color: #4b4b4b;
+    padding: 0 10px;
+    color: #ececec;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: 5px 5px;
+    border-radius: 32px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+/* Movie list */
+.movie-group-list {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.movie-group-list .movie-qiuck-box {
+    width: 24%;
+    height: 270px;
+    border-radius: 5px;
+    background-color: #4b4b4b;
+    box-shadow: 1px 1px 10px 2px #00000028;
+    margin: 7px 0;
+}
+.movie-group-list .movie-qiuck-box .movie-image {
+    width: 100%;
+    height: 80%;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+}
+.movie-group-list .movie-qiuck-box .movie-image .vote-rate {
+    width: 100%;
+    margin: 10px 10px;
+}
+.movie-group-list .movie-qiuck-box .movie-image .vote-rate i {
+    color: #ff7b00;
+    text-shadow: 2px 2px #212121;
+}
+.movie-group-list .movie-qiuck-box .movie-title {
+    width: 100%;
+}
+.movie-group-list .movie-qiuck-box .movie-title p {
+    margin: 3px 5px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+}
+.footer .detail {
+    width: 98%;
+    height: 40%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.footer .detail a {
+    color: #ffffff;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0 8px;
+}
+.footer .footer-content {
+    width: 100%;
+    height: 60%;
+    background-color: #212121;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #ffffff;
+    font-size: 10px;
+}
+
+@media only screen and (max-width: 1650px){
+    .movie-group-list .movie-qiuck-box {
+        width: 24%;
+        height: 225px;
+    }
+    .movie-group-list .movie-qiuck-box .movie-image .vote-rate i {
+        font-size: 15px;
+    }
+    .movie-group-list .movie-qiuck-box .movie-title p {
+        font-size: 17px;
+    }
+}
+@media only screen and (max-width: 1450px){
+    .movie-group-list .movie-qiuck-box {
+        width: 24%;
+        height: 200px;
+    }
+}
+@media only screen and (max-width: 1250px){
+    .movie-group-list .movie-qiuck-box {
+        width: 24%;
+        height: 175px;
+    }
+    .movie-group-list .movie-qiuck-box .movie-image .vote-rate i {
+        font-size: 14px;
+    }
+    .movie-group-list .movie-qiuck-box .movie-title p {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 1050px){
+    /* Movie list */
+    .movie-group-list .movie-qiuck-box {
+        width: 32%;
+        height: 180px;
+    }
+}
+@media only screen and (max-width: 850px){
+    /* Genre list */
+    .mat-chip-list .genre {
+        font-size: 12px;
+        margin: 4px 4px;
+        height: 25px;
+        padding: 0 5px;
+    }
+    /* Movie list */
+    .movie-group-list {
+        margin-top: 0;
+    }
+    .movie-group-list .movie-qiuck-box {
+        width: 32%;
+        height: 140px;
+    }
+    .movie-group-list .movie-qiuck-box .movie-image .vote-rate i {
+        font-size: 12px;
+    }
+    .movie-group-list .movie-qiuck-box .movie-title p {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 700px){
+    /* Genre list */
+    .mat-chip-list .genre {
+        margin: 3px 3px;
+        font-size: 10px;
+        height: 22px;
+    }
+    /* Movie list */
+    .movie-group-list .movie-qiuck-box {
+        width: 32%;
+        height: 120px;
+    }
+    .movie-group-list .movie-qiuck-box .movie-image .vote-rate i {
+        font-size: 10px;
+    }
+    .movie-group-list .movie-qiuck-box .movie-title p {
+        font-size: 10px;
+    }
+    /* Footer */
+    .footer {
+        height: 30px;
+        margin-top: 10px;
+    }
+    .footer .detail {
+        display: none;
+    }
+    .footer .footer-content {
+        width: 100%;
+        height: 100%;
+    }
+    .footer .footer-content img{
+        height: 20px;
+    }
+}
+@media only screen and (max-width: 600px){
+    /* Movie list */
+    .movie-group-list .movie-qiuck-box {
+        width: 49%;
+        height: 150px;
+    }
+    .movie-group-list .movie-qiuck-box .movie-image {
+        height: 75%;
+    }
+    .movie-group-list .movie-qiuck-box .movie-image .vote-rate i {
+        font-size: 12px;
+    }
+    .movie-group-list .movie-qiuck-box .movie-title p {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 500px){
+    /* Movie list */
+    .movie-group-list .movie-qiuck-box {
+        height: 130px;
+    }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../image/logo.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../icon/css/all.min.css">
+        <link rel="stylesheet" href="./css/search.css">
+        <link rel="stylesheet" href="../headerBar.css">
+        <link rel="stylesheet" href="./css/movie.css">
+        <link rel="stylesheet" href="../contactBox.css">
+    </head>
+    <body>
+        <div class="container">
+            <section class="navbar" style="z-index: 1;">
+                <div class="logo">
+                    <button><i id="menu-btn" class="fa-solid fa-bars"></i></button>
+                    <a href="">
+                        CHI Movie
+                        <i class="fa-solid fa-circle-play"></i>
+                    </a>
+                </div>
+                <ul id="navbar-list">
+                    <div class="second-logo">
+                        <button><i id="menu-btn-second" class="fa-solid fa-bars"></i></button>
+                        <a href="">
+                            CHI Movie
+                            <i class="fa-solid fa-circle-play"></i>
+                        </a>
+                    </div>
+                    <li><a class="home-page" data-tip="Home Page" href="../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li><a class="faq-page" data-tip="Frqeuntly Asked Questions" href="./faq.html"><i class="fa-solid fa-comments"></i>FAQ</a></li>
+                    <li><a class="request-drama-page request-drama" data-tip="Request Drama or Anime" style="cursor: pointer;"><i class="fa-solid fa-message"></i>Request Drama</a></li>
+                    <li><a class="theme-page" data-tip="Switch Theme" href=""><i class="fa-solid fa-fill-drip"></i>Theme</a></li>
+                    <li><a class="explore-page" data-tip="Video Library" href="./explore.html"><i class="fa-solid fa-eye"></i>Explore</a></li>
+                    <li><a class="search-page" data-tip="Search" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i>Search</a></li>
+                    <li class="sign-in-btn"><a class="signin-page" href=""><i class="fa-solid fa-circle-user"></i>Sign in</a></li>
+                </ul>
+                <div class="second-nav-list">
+                    <a class="search-page" data-tip="Search" id="search-second-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a class="sign-in-btn" href=""><i class="fa-solid fa-circle-user"></i>Sign in</a>
+                </div>
+            </section>
+            <div class="contact-box">
+            </div>
+            <div class="content">
+                <div class="movie-display">
+                    <div class="video-header">
+                        <div class="header-movie-option">
+                            <p>Trailer</p>
+                            <div class="movie-option">
+                                <i class="fa-sharp fa-solid fa-closed-captioning"></i>
+                                <i class="fa-solid fa-unlock"></i>
+                                <!-- <i class="fa-solid fa-lock"></i> -->
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie-picture">
+                        
+                    </div>
+                </div>
+                <div class="movie-detail">
+                    <div class="movie-detail-box">
+                        <h3 id="movie-title">Avatar: The Way of Water (SD + Sub)</h3>
+                        <p id="release-date">Dec 12, 2022</p>
+                        <div class="subtitle-list-box">
+                            <p id="language">United States</p>
+                            <div class="vl"></div>
+                            <p>Completed</p>
+                            <div class="vl"></div>
+                            <p>Hollywood</p>
+                        </div>
+                        <div class="detail-action">
+                            <button><i class="fa-regular fa-heart"></i>Favorite</button>
+                            <button><i class="fa-solid fa-share-nodes"></i>Share</button>
+                            <button><i class="fa-solid fa-cloud-arrow-down"></i>Download</button>
+                            <button onclick="showContactBox()"><i class="fa-solid fa-exclamation"></i>Report</button>
+                        </div>
+                        <p style="margin: 20px 0;font-size: 12px;color: #d4d4d4;">Pop ads only have frequency of 1 pop per 1 hour.</p>
+                        <div class="description-movie">
+                            <div class="description-quick-icon">
+                                <p>Description</p>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="description-detail">
+                                <p class="description-detail-text">Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.</p>
+                            </div>
+                        </div>
+                        <h3 class="episode">Episode</h3>
+                        <p class="episode-total">Total 1</p>
+                        <div class="episode-group-box">
+                            <button class="episode-box">1</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Search -->
+            <div class="search-bar" style="z-index: 1;">
+                <div class="search-content">
+                    <div class="search-box">
+                        <i class="fa-solid fa-angle-left"></i>
+                        <div class="input-search-box">
+                            <input id="search-box" type="text" placeholder="Search">
+                        </div>
+                    </div>
+                    <div class="genre-list">
+                        <button onclick="genreSelected(0)" class="genre-group genre1">All</button>
+                        <button onclick="genreSelected(1)" class="genre-group genre2">TVSeries</button>
+                        <button onclick="genreSelected(2)" class="genre-group genre3">Movie</button>
+                        <button onclick="genreSelected(3)" class="genre-group genre4">Anime</button>
+                        <button onclick="genreSelected(4)" class="genre-group genre5">Hollywood</button>
+                    </div>
+                    <h3>Popular Search</h3>
+                    <div class="movie-list-group">
+                        <div class="movie-list">
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                // Fetch movie api
+                const MY_IMG_URl = 'https://image.tmdb.org/t/p/w500';
+
+                const queryString = window.location.search;
+                const urlParm = new URLSearchParams(queryString);
+                const apiUrl = urlParm.get('apiUrl');
+                const movieId = urlParm.get('movieId');
+                var urlArray = apiUrl.split("|");
+                var url = urlArray.join("&");
+
+                getMovieDisplay(url); 
+                console.log(apiUrl);
+                function getMovieDisplay(url){
+                    fetch(url).then(res => res.json()).then(data => {
+                        console.log(data.results);
+                        showMovieVideo(data.results);
+                    });
+                }
+                
+                function showMovieVideo(data){
+                    const {title,backdrop_path,release_date,overview,original_language} = data[movieId];
+                    document.querySelector(".movie-picture").style.backgroundImage = `url('${MY_IMG_URl+backdrop_path}'`;
+                    document.querySelector("#movie-title").innerText = title;
+                    document.querySelector("#release-date").innerText = release_date+"";
+                    document.querySelector(".description-detail-text").innerText = overview;
+                    document.getElementById('language').innerText = original_language;
+                }
+                
+            </script>
+            <!-- Footer -->
+            <div class="footer">
+                <div class="footer-content">
+                    <p>Version 3.4</p>
+                    <img height="25px" src="../image/GoogleStore.png" alt="">
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./js/movie.js"></script>
+    <script src="../headerBar.js"></script>
+    <script src="../contactBox.js"></script>
+    <script src="../component/js/search.js"></script>
+    <script src="../component/data/movieResults.js"></script>
+    <script>
+        getMovie(API_URL,0,showMovieToSearchList,"./movie.html");
+        getMovie(API_URL2,2,showMovieToSearchList,"./movie.html");
+        getMovie(API_URL1,1,showMovieToSearchList,"./movie.html");
+        getMovie(API_URL3,3,showMovieToSearchList,"./movie.html");
+        getMovie(API_URL4,4,showMovieToSearchList,"./movie.html");
+        getMovie(API_URL5,5,showMovieToSearchList,"./movie.html");
+
+        searchActivity("./movie.html");
+    </script>
+</html>

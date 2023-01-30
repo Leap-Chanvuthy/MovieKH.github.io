@@ -1,0 +1,266 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #212121;
+}
+::-webkit-scrollbar-thumb {
+    background: #e97c00;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track:hover {
+    background-color: #ffffff;
+}
+::-webkit-scrollbar-thumb:hover {
+    border-top: 1px solid #212121;
+    border-bottom: 1px solid #212121;
+}
+
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #303030;
+}
+.container {
+    display: block;
+    width: 100%;
+}
+.navbar{
+    background-color: #212121;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+}
+.navbar .logo{
+    margin: auto 0;
+}
+.navbar .logo a,.navbar .second-logo a {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bolder;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 0.3s;
+}
+.navbar .logo a:hover,.navbar .second-logo a:hover {
+    background-color: #4b4b4b79;
+}
+.navbar .logo a {
+    margin-left: 40px;
+}
+.navbar .logo a i {
+    margin: 0 5px;
+    color: #ff8800;
+    font-size: 20px;
+}
+.navbar ul{
+    font-size: 0;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.navbar ul li{
+    font-size: 14px;
+    display: inline-block;
+    height: 100%;
+    margin: auto 0;
+}
+.navbar ul li a{
+    color: aliceblue;
+    padding: 7px 15px;
+    margin: 13px 0;
+    text-decoration: none;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 550;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.navbar ul li a:hover{
+    color: #dadada;
+}
+.navbar ul li a i{
+    margin-right: 10px;
+    font-size: 17px;
+}
+.navbar ul .sign-in-btn a{
+    border: 1px solid #4b4b4b;
+}
+/* Tooltips */
+.navbar ul li a::after {
+    position: absolute;
+    content: attr(data-tip);
+    background-color: #4b4b4b;
+    top: 60px;
+    margin: auto;
+    padding: 7px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+.navbar ul li .home-page::after {
+    margin-left: -9px;
+}
+.navbar ul li .faq-page::after {
+    margin-left: -45px;
+}
+.navbar ul li .request-drama-page::after {
+    margin-left: -10px;
+}
+.navbar ul li .theme-page::after {
+    margin-left: -10px;
+}
+.navbar ul li .explore-page::after {
+    margin-left: -4px;
+}
+.navbar ul li .search-page::after {
+    margin-left: 5px;
+}
+.navbar ul li .signin-page::after {
+    background: none;
+}
+.navbar ul li a::before {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    margin: auto;
+}
+.navbar ul li a::after,.navbar ul li a::before {
+    display: none;
+}
+.navbar ul li a:hover::before,.navbar ul li a:hover::after {
+    display: block;
+}
+.navbar button {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: none;
+}
+/* ================== */
+.navbar .second-logo {
+    display: none;
+}
+.second-nav-list {
+    display: none;
+}
+@media only screen and (max-width: 1000px) {
+    .navbar ul li .search-page,.navbar ul li .signin-page {
+        display: none;
+    }
+    .navbar {
+        justify-content: space-between;
+    }
+    .navbar .logo {
+        display: flex;
+        width: 200px;
+    }
+    .navbar .second-logo {
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        height: 40px;
+        padding: 5px 0;
+        margin-top: 10px;
+        border-bottom: 1px solid #4b4b4b;
+    }
+    .navbar .second-logo a {
+        font-size: 18px;
+    }
+    .navbar .second-logo a i{
+        font-size: 20px;
+        margin-left: 5px;
+        color: #ff8800;
+    }
+    .navbar .logo button {
+        display: block;
+        width: 0;
+    }
+    .navbar button, .navbar .second-logo button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 3px;
+    }
+    .navbar button i, .navbar .second-logo button i {
+        padding: 10px;
+        border-radius: 100%;
+        transition: 0.3s;
+    }
+    .navbar button i:hover, .navbar .second-logo button i:hover {
+        background-color: #4b4b4b;
+    }
+    .navbar ul{
+        width: 180px;
+        float: left;
+        position: absolute;
+        background-color: #212121;
+        height: 100vh;
+        display: block;
+        left: -200px;
+        transition: 0.4s;
+    }
+    .navbar ul li{
+        height: unset;
+        display: block;
+    }
+    .navbar ul li a{
+        border-radius: unset;
+    }
+    
+    .second-nav-list {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        height: 100%;
+        margin-right: 20px;
+    }
+    .navbar .second-nav-list a{
+        color: aliceblue;
+        padding: 7px 10px;
+        margin: 13px 0;
+        text-decoration: none;
+        display: block;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 550;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .navbar .second-nav-list a:hover{
+        color: #dadada;
+    }
+    .navbar .second-nav-list a i{
+        margin-right: 10px;
+        font-size: 17px;
+    }
+    .navbar .second-nav-list .sign-in-btn{
+        border: 1px solid #4b4b4b;
+    }
+    /* Tooltips */
+    .navbar ul li a:hover::before,.navbar ul li a:hover::after {
+        display: none;
+    }
+}
